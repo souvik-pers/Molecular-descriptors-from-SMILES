@@ -8,10 +8,7 @@ Created on Wed Oct 25 15:20:28 2023
 
 # RIPSER link
 # https://github.com/Ripser/ripser
-# Ripser is a lean C++ code for the computation of Vietoris–Rips persistence barcodes.
-# It can do just this one thing, but does it extremely well.
 
-# https://ripser.scikit-tda.org/en/latest/reference/stubs/ripser.ripser.html
 
 import pandas as pd
 import os, os.path
@@ -89,7 +86,6 @@ for index in range(1,num_files+1):
 print()
 
 ## Next Step: To combine all individual output csv files in a single file
-#https://stackoverflow.com/questions/20906474/import-multiple-csv-files-into-pandas-and-concatenate-into-one-dataframe
 
 import glob
 import os
@@ -101,7 +97,6 @@ all_files = glob.glob(os.path.join(path, "./persistence-entropy-out-*.csv"))
 #print(len(all_files))
 
 #Need sorting filename's order in all_files list
-#https://copyprogramming.com/howto/python-sort-file-names-with-numbers
 import natsort
 all_files_sorted = natsort.natsorted(all_files)
 print(all_files_sorted)
